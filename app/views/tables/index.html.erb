@@ -1,0 +1,21 @@
+<h1>日記</h1>
+
+<hr>
+<% @tables.each do |table| %>
+  <br>
+  <h2><%= table.title %></h2>
+  <p><%= table.text %></p>
+  <p>Author:<%= table.name %></p>
+  <p><%= table.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+  <%= link_to '表示', table %>
+  <%= link_to '編集', edit_table_path(table) %>
+  <%= link_to '削除', table, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <br>
+  <br>
+  <hr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新規作成', new_table_path %>

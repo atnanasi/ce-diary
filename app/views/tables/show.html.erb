@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>著者:</b>
+  <%= @table.name %>
+</p>
+
+<p>
+  <b>タイトル:</b>
+  <%= @table.title %>
+</p>
+
+<p>
+  <b>本文:</b>
+  <%= @table.text %>
+</p>
+
+
+<%= link_to '編集', edit_table_path(@table) %> |
+<%= link_to '戻る', tables_path %>
